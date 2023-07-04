@@ -6,7 +6,7 @@ output: html_document
 ---
 ## Classification of Physical Exercise
   
-  ```{r, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 #load packages
 check.packages <- function(pkg){ 
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])] 
@@ -17,6 +17,7 @@ check.packages <- function(pkg){
 packages<-c("sqldf","lattice","ggplot2"
             ,"lubridate","caret") 
 check.packages(packages)
+
 ```
 
 
