@@ -472,33 +472,6 @@ group by classe order by classe&#39;
 ## 3      C        1015            822          80
 ## 4      D         973            851          87
 ## 5      E        1097           1031          93</code></pre>
-<p>Finally, let’s classify the test data set</p>
-<pre class="r"><code>testb &lt;- test_data[c(&quot;roll_belt&quot;,&quot;pitch_belt&quot;,&quot;yaw_belt&quot;,&quot;total_accel_belt&quot;)]
-names(testb)</code></pre>
-<pre><code>## [1] &quot;roll_belt&quot;        &quot;pitch_belt&quot;       &quot;yaw_belt&quot;         &quot;total_accel_belt&quot;</code></pre>
-<pre class="r"><code>testb$p_classe &lt;- predict(fit,newdata=testb)
-testb</code></pre>
-<pre><code>##    roll_belt pitch_belt yaw_belt total_accel_belt p_classe
-## 1     123.00      27.00    -4.75               20        B
-## 2       1.02       4.87   -88.90                4        A
-## 3       0.87       1.82   -88.50                5        B
-## 4     125.00     -41.60   162.00               17        A
-## 5       1.35       3.33   -88.60                3        A
-## 6      -5.92       1.59   -87.70                4        E
-## 7       1.20       4.44   -87.30                4        D
-## 8       0.43       4.15   -88.50                4        A
-## 9       0.93       6.72   -93.70                4        A
-## 10    114.00      22.40   -13.10               18        A
-## 11      0.92       5.94   -92.70                3        B
-## 12      1.01       4.96   -87.80                5        A
-## 13      0.54       2.45   -88.60                3        B
-## 14      0.45       5.02   -87.90                5        A
-## 15      5.34      -3.09   -80.30                4        E
-## 16      1.65       3.47   -87.00                2        E
-## 17    129.00      27.80     1.84               21        A
-## 18      0.92       5.31   -93.10                3        B
-## 19    123.00      26.70    -2.68               19        B
-## 20      1.40       3.20   -88.70                3        E</code></pre>
 </div>
 
 
