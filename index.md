@@ -34,7 +34,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 
 ![Credit Score Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_1_credit_score.png)
 
-**Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 47 percentage points lower.
+**Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 40 percentage points lower.
 
 ---
 
@@ -54,7 +54,7 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 
 ![Cross-Sell Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_3_cross_sell.png)
 
-**Finding:** Multi-product leads convert 2x better and deliver 3.5x higher lifetime value.
+**Finding:** Multi-product leads convert 2x better and deliver 2.5 to 3.5x higher lifetime value.
 
 ---
 
@@ -136,7 +136,7 @@ Based on the analysis:
 - Adverse selection measurement
 - Channel profitability analysis
 
-**[View the Code →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine)**
+**[View the Code →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/tree/main/notebooks)**
 
 ---
 
