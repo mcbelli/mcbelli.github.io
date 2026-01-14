@@ -116,7 +116,6 @@ Based on the analysis:
 2. **Implement credit-score-based lead prioritization** in the sales process
 3. **Investigate high-loss-ratio states** for rate adequacy
 4. **Invest in cross-sell/bundling** to improve retention and LTV
-5. **Reduce or eliminate purchased email list**—low CPL doesn't compensate for poor economics
 
 ---
 
