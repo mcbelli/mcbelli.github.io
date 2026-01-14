@@ -78,8 +78,6 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 
 ---
 
-#### 6. Average Policy Profitability by Channel
-
 #### 6. Marketing ROI by Channel
 
 What matters for marketing budget allocation is profit per marketing dollar spent, not average profit per policy. A channel with lower profit per policy can still be the better investment if acquisition costs are low enough so that the additional leads and policies more than offset the lower average policy profitability.
