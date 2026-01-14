@@ -34,7 +34,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 
 ![Credit Score Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_1_credit_score.png)
 
-**Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 40 percentage points lower.
+**Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 20 percentage points lower.
 
 ---
 
@@ -44,7 +44,7 @@ Age is the primary rating variable in life and health insurance. The optimal cus
 
 ![Age Band Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_2_age_bands.png)
 
-**Finding:** Life insurance LTV peaks at ages 46-55; Health and P&C show different patterns requiring tailored targeting strategies.
+**Finding:** Life insurance LTV peaks at ages 36-45; Health and P&C show different patterns requiring tailored targeting strategies.
 
 ---
 
@@ -54,7 +54,7 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 
 ![Cross-Sell Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_3_cross_sell.png)
 
-**Finding:** Multi-product leads convert 2x better and deliver 2.5 to 3.5x higher lifetime value.
+**Finding:** Multi-product leads convert 2x better and deliver 2x higher lifetime value.
 
 ---
 
@@ -74,17 +74,19 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 
 ![Early Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_5_early_claims.png)
 
-**Finding:** Email channel (lowest CPL) has 27% higher early claim rates than paid search—evidence of adverse selection.
+**Finding:** Email channel (lowest CPL) has 17% higher early claim rates than paid search—evidence of adverse selection.
 
 ---
 
 #### 6. Average Policy Profitability by Channel
 
-The true test: when you account for tenure and claims, which channels actually deliver profitable policies?
+#### 6. Marketing ROI by Channel
+
+What matters for marketing budget allocation is profit per marketing dollar spent, not average profit per policy. A channel with lower profit per policy can still be the better investment if acquisition costs are low enough so that the additional leads and policies more than offset the lower average policy profitability.
 
 ![Policy Profitability Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_6_policy_profitability.png)
 
-**Finding:** Despite 6x higher CPL, paid search delivers the highest profit per policy. Email's low acquisition cost is offset by poor policy economics.
+**Finding:** When comparing profit generated per dollar of marketing spend, it is clear that shifting dollars toward the highest-ROI channel maximizes total profit from a fixed marketing budget.
 
 ---
 
@@ -112,7 +114,7 @@ Do higher-converting channels produce riskier policies? This tests the quality-q
 
 Based on the analysis:
 
-1. **Shift budget to paid search** despite higher CPL—profitability justifies the cost
+1. **Reallocate budget based on marketing ROI**—optimize for profit per dollar spent, not profit per policy
 2. **Implement credit-score-based lead prioritization** in the sales process
 3. **Investigate high-loss-ratio states** for rate adequacy
 4. **Invest in cross-sell/bundling** to improve retention and LTV
