@@ -84,7 +84,7 @@ What matters for marketing budget allocation is profit per marketing dollar spen
 
 ![Policy Profitability Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/analysis_6_policy_profitability.png)
 
-**Finding:** When comparing profit generated per dollar of marketing spend, it is clear that shifting dollars toward the highest-ROI channel maximizes total profit from a fixed marketing budget.
+**Finding:** When comparing profit generated per dollar of marketing spend, it is clear that shifting dollars toward the highest-ROI channel maximizes total profit from a fixed marketing budget. Shift budget towards email.
 
 ---
 
@@ -112,7 +112,7 @@ Do higher-converting channels produce riskier policies? This tests the quality-q
 
 Based on the analysis:
 
-1. **Reallocate budget based on marketing ROI**—optimize for profit per dollar spent, not profit per policy
+1. **Shift budget toward email** to optimize for profit per marketing dollar spent
 2. **Implement credit-score-based lead prioritization** in the sales process
 3. **Investigate high-loss-ratio states** for rate adequacy
 4. **Invest in cross-sell/bundling** to improve retention and LTV
