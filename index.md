@@ -42,7 +42,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 
 Age is the primary rating variable in life and health insurance. The optimal customer age differs by product line, reflecting different risk profiles and purchasing behaviors.
 
-![Age Band Analysis](./insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_2_age_bands.png)
+![Age Band Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_2_age_bands.png)
 
 **Finding:** Life insurance LTV peaks at ages 36-45; Health and P&C show different patterns requiring tailored targeting strategies.
 
@@ -52,7 +52,7 @@ Age is the primary rating variable in life and health insurance. The optimal cus
 
 Bundled customers have 90%+ retention vs ~80% for single-product. This analysis quantifies the cross-sell opportunity.
 
-![Cross-Sell Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_3_cross_sell.png)
+![Cross-Sell Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_3_cross_sell.png)
 
 **Finding:** Multi-product leads convert 2x better and deliver 2x higher lifetime value.
 
@@ -62,7 +62,7 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 
 Insurance is state-regulated—each state has different rate approval processes, coverage mandates, and competitive dynamics.
 
-![Geographic Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_4_geographic.png)
+![Geographic Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_4_geographic.png)
 
 **Finding:** Loss ratios vary significantly by state, indicating need for geographic risk pricing and targeted underwriting.
 
@@ -72,7 +72,7 @@ Insurance is state-regulated—each state has different rate approval processes,
 
 Cheaper acquisition channels attract higher-risk customers. This analysis quantifies the adverse selection effect.
 
-![Early Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_5_early_claims.png)
+![Early Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_5_early_claims.png)
 
 **Finding:** Email channel (lowest CPL) has 17% higher early claim rates than paid search—evidence of adverse selection.
 
@@ -82,7 +82,7 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 
 What matters for marketing budget allocation is profit per marketing dollar spent, not average profit per policy. A channel with lower profit per policy can still be the better investment if acquisition costs are low enough so that the additional leads and policies more than offset the lower average policy profitability.
 
-![Policy Profitability Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_6_policy_profitability.png)
+![Policy Profitability Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_6_policy_profitability.png)
 
 **Finding:** When comparing profit generated per dollar of marketing spend, it is clear that shifting dollars toward the highest-ROI channel maximizes total profit from a fixed marketing budget. Shift budget towards email.
 
@@ -92,7 +92,7 @@ What matters for marketing budget allocation is profit per marketing dollar spen
 
 Identifying geographic risk concentration to inform pricing and underwriting decisions.
 
-![State Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_7_state_claims.png)
+![State Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_7_state_claims.png)
 
 **Finding:** Identified 5 high-risk states requiring rate increases or stricter underwriting criteria.
 
@@ -102,7 +102,7 @@ Identifying geographic risk concentration to inform pricing and underwriting dec
 
 Do higher-converting channels produce riskier policies? This tests the quality-quantity trade-off.
 
-![Bind vs Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_8_bind_vs_claims.png)
+![Bind vs Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_8_bind_vs_claims.png)
 
 **Finding:** Positive correlation (r=0.43) confirms that optimizing purely for conversion volume increases claims risk.
 
