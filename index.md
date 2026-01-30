@@ -32,7 +32,7 @@ In insurance, growth without risk discipline destroys value. Marketing teams opt
 
 Credit-based insurance scores are a major underwriting tool. This analysis validates that better credit correlates with higher conversion rates AND lower claims—not just ability to pay.
 
-![Credit Score Analysis](./notebooks/model_outputs/analysis_1_credit_score.png)
+![Credit Score Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_1_credit_score.png)
 
 **Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 20 percentage points lower.
 
