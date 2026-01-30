@@ -42,7 +42,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 
 Age is the primary rating variable in life and health insurance. The optimal customer age differs by product line, reflecting different risk profiles and purchasing behaviors.
 
-![Age Band Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_2_age_bands.png)
+![Age Band Analysis](./insurance-marketing-analytics-decision-engine/notebooks/model_outputs/analysis_2_age_bands.png)
 
 **Finding:** Life insurance LTV peaks at ages 36-45; Health and P&C show different patterns requiring tailored targeting strategies.
 
