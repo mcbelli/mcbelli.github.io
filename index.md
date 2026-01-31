@@ -39,12 +39,13 @@ Eight exploratory analyses reveal the key dynamics of insurance marketing:
 
 The EDA surfaces the core insight: **email has the highest ROI despite the lowest lead quality**, because its acquisition cost ($8/lead) is dramatically lower than paid search ($45/lead).
 
-**[View Full EDA →](EDA/exploratory-analysis.md)**
+**[View Full EDA →](EDA/insurance_exploratory-analysis.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png">
+
+<a href="EDA/insurance_exploratory-analysis.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png" width="100%">
 </a>
 <em>Click to enlarge</em>
@@ -69,12 +70,12 @@ The Marketing Mix Model (MMM) quantifies the relationship between spend and conv
 
 The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search is at 79%.
 
-**[View Full Model Documentation →](MMM/marketing-mix-model.md)**
+**[View Full Model Documentation →](MMM/insurance_marketing-mix-model.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png">
+<a href="MMM/insurance_marketing-mix-model.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
@@ -102,12 +103,12 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 - **+6% higher profit**
 - **20% lower customer acquisition cost**
 
-**[View Optimization Details →](Optimization/optimization.md)**
+**[View Optimization Details →](Optimization/insurance_optimization.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png">
+<a href="Optimization/insurance_optimization.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
