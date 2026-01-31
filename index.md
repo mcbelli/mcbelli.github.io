@@ -6,136 +6,145 @@
 
 ---
 
-## Featured Project
+## Insurance Marketing Analytics Decision Engine
 
-### Insurance Marketing Analytics Decision Engine
-
-This project demonstrates how to integrate data science into marketing and business decisions for a B2C insurance company. Rather than building isolated models, it shows how funnel analytics, segmentation, and predictive insights combine to drive profitable growth.
+This project demonstrates an end-to-end analytics workflow for a B2C insurance company: from exploratory analysis through predictive modeling to budget optimization and business impact measurement. The data are synthetic but designed to reflect realistic insurance marketing dynamics.
 
 **[View Repository →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine)**
 
 ---
 
-### The Business Problem
+## The Business Problem
 
 In insurance, growth without risk discipline destroys value. Marketing teams optimize for lead volume and cost-per-lead, but cheap leads often become unprofitable policies. This project answers:
 
 1. Which marketing channels drive *profitable* growth—not just volume?
-2. How do we balance lead acquisition cost against underwriting quality?
-3. Where should we reallocate spend to maximize lifetime value?
+2. How do we model the diminishing returns of marketing spend?
+3. Where should we reallocate budget to maximize lifetime value?
 
 ---
 
-### Key Analyses
+## 1. Exploratory Data Analysis
 
-#### 1. Credit Score Impact on Conversion and Loss Ratio
+<table>
+<tr>
+<td width="55%" valign="top">
 
-Credit-based insurance scores are a major underwriting tool. This analysis validates that better credit correlates with higher conversion rates AND lower claims—not just ability to pay.
+Eight exploratory analyses reveal the key dynamics of insurance marketing:
 
-![Credit Score Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_1_credit_score.png)
+- **Credit score** strongly predicts both conversion and claims risk
+- **Channel quality varies**: cheaper leads have higher loss ratios
+- **Cross-sell customers** have 2x higher lifetime value
+- **Geographic variation** requires state-level pricing adjustments
 
-**Finding:** Excellent credit customers convert at 3x the rate of Poor credit, with loss ratios 20 percentage points lower.
+The EDA surfaces the core insight: **email has the highest ROI despite the lowest lead quality**, because its acquisition cost ($8/lead) is dramatically lower than paid search ($45/lead).
 
----
+**[View Full EDA →](EDA/exploratory-analysis.md)**
 
-#### 2. Optimal Age Bands by Product
+</td>
+<td width="45%" valign="top">
 
-Age is the primary rating variable in life and health insurance. The optimal customer age differs by product line, reflecting different risk profiles and purchasing behaviors.
+<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png">
+  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png" width="100%">
+</a>
+<em>Click to enlarge</em>
 
-![Age Band Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_2_age_bands.png)
-
-**Finding:** Life insurance LTV peaks at ages 36-45; Health and P&C show different patterns requiring tailored targeting strategies.
-
----
-
-#### 3. Cross-Sell and Multi-Product Opportunity
-
-Bundled customers have 90%+ retention vs ~80% for single-product. This analysis quantifies the cross-sell opportunity.
-
-![Cross-Sell Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_3_cross_sell.png)
-
-**Finding:** Multi-product leads convert 2x better and deliver 2x higher lifetime value.
-
----
-
-#### 4. Geographic Performance Variation
-
-Insurance is state-regulated—each state has different rate approval processes, coverage mandates, and competitive dynamics.
-
-![Geographic Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_4_geographic.png)
-
-**Finding:** Loss ratios vary significantly by state, indicating need for geographic risk pricing and targeted underwriting.
+</td>
+</tr>
+</table>
 
 ---
 
-#### 5. Adverse Selection by Marketing Channel
+## 2. Marketing Mix Model
 
-Cheaper acquisition channels attract higher-risk customers. This analysis quantifies the adverse selection effect.
+<table>
+<tr>
+<td width="55%" valign="top">
 
-![Early Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_5_early_claims.png)
+The Marketing Mix Model (MMM) quantifies the relationship between spend and conversions using **Hill saturation curves**:
 
-**Finding:** Email channel (lowest CPL) has 17% higher early claim rates than paid search—evidence of adverse selection.
+- **Response curves** capture diminishing returns at higher spend levels
+- **Unit economics** (avg profit per conversion) vary by channel
+- **ROI-saturation constraint** ensures high-ROI channels aren't mistakenly labeled as "saturated"
 
----
+The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search is at 79%.
 
-#### 6. Marketing ROI by Channel
+**[View Full Model Documentation →](MMM/marketing-mix-model.md)**
 
-What matters for marketing budget allocation is profit per marketing dollar spent, not average profit per policy. A channel with lower profit per policy can still be the better investment if acquisition costs are low enough so that the additional leads and policies more than offset the lower average policy profitability.
+</td>
+<td width="45%" valign="top">
 
-![Policy Profitability Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_6_policy_profitability.png)
+<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png">
+  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png" width="100%">
+</a>
+<em>Click to enlarge</em>
 
-**Finding:** When comparing profit generated per dollar of marketing spend, it is clear that shifting dollars toward the highest-ROI channel maximizes total profit from a fixed marketing budget. Shift budget towards email.
-
----
-
-#### 7. State-Level Claims and Loss Ratios
-
-Identifying geographic risk concentration to inform pricing and underwriting decisions.
-
-![State Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_7_state_claims.png)
-
-**Finding:** Identified 5 high-risk states requiring rate increases or stricter underwriting criteria.
-
----
-
-#### 8. Bind Rate vs. Claims Rate Trade-off
-
-Do higher-converting channels produce riskier policies? This tests the quality-quantity trade-off.
-
-![Bind vs Claims Analysis](https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/notebooks/model_outputs/analysis_8_bind_vs_claims.png)
-
-**Finding:** Positive correlation (r=0.43) confirms that optimizing purely for conversion volume increases claims risk.
+</td>
+</tr>
+</table>
 
 ---
 
-### Strategic Recommendations
+## 3. Budget Optimization
 
-Based on the analysis:
+<table>
+<tr>
+<td width="55%" valign="top">
 
-1. **Shift budget toward email** to optimize for profit per marketing dollar spent
-2. **Implement credit-score-based lead prioritization** in the sales process
-3. **Investigate high-loss-ratio states** for rate adequacy
-4. **Invest in cross-sell/bundling** to improve retention and LTV
+Using the fitted response curves, we simulate two scenarios:
+
+- **Period 1 (Current)**: Historical budget allocation
+- **Period 2 (Optimal)**: Budget reallocated to equalize marginal ROI across channels
+
+With the **same total marketing spend**, the optimal allocation shifts ~$600/week from social to email, yielding:
+
+- **+25% more conversions**
+- **+6% higher profit**
+- **20% lower customer acquisition cost**
+
+**[View Optimization Details →](Optimization/optimization.md)**
+
+</td>
+<td width="45%" valign="top">
+
+<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png">
+  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png" width="100%">
+</a>
+<em>Click to enlarge</em>
+
+</td>
+</tr>
+</table>
 
 ---
 
-### Technical Implementation
+## 4. Business Impact
+
+<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Business_Impact/Business_Impact_homepage.png">
+  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Business_Impact/Business_Impact_homepage.png" width="70%">
+</a>
+
+**Bottom line**: By reallocating the same $227K annual marketing budget:
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| New Customers | 746 | 931 | **+24.8%** |
+| Lifetime Revenue | $14.4M | $17.9M | **+$3.6M** |
+| Policy Profit | $1.7M | $1.8M | **+$102K** |
+| CAC | $304 | $244 | **-20%** |
+
+---
+
+## Technical Implementation
 
 **Data Generation:** Python script creating synthetic but realistic insurance marketing data with:
 - 3 years of lead data across 3 products (Health, Life, Property/Casualty)
-- 3 marketing channels with quality/cost trade-offs built in
-- Full sales funnel (Lead → Qualified → Quote → Binder → Sold)
-- Demographics, claims simulation, and policy economics
+- 3 marketing channels with quality/cost trade-offs
+- Full sales funnel with claims simulation
 
-**Analysis:** 8 EDA modules demonstrating insurance domain expertise:
-- Credit-based underwriting validation
-- Actuarial age segmentation
-- Bundling/retention economics
-- State regulatory impact
-- Adverse selection measurement
-- Channel profitability analysis
+**Modeling:** Hill saturation functions with ROI-based constraints, fit using nonlinear least squares.
 
-**[View the Code →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/tree/main/notebooks)**
+**Optimization:** Profit-maximizing budget allocation using scipy.optimize.
 
 ---
 
@@ -157,7 +166,3 @@ I'm an analytics leader with 20+ years of experience developing data-driven stra
 - **Email:** [bellimike23@gmail.com](mailto:bellimike23@gmail.com)
 - **LinkedIn:** [linkedin.com/in/michaelbelli](https://www.linkedin.com/in/michaelbelli/)
 - **GitHub:** [github.com/mcbelli](https://github.com/mcbelli)
-
----
-
-*More projects coming soon.*
