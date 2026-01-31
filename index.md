@@ -75,7 +75,7 @@ The model reveals that email is operating at just 8% of its half-saturation poin
 </td>
 <td width="45%" valign="top">
 
-<a href="MMM/insurance_marketing-mix-model.md">
+<a href="insurance-marketing-analytics-decision-engine/MMM/insurance_marketing-mix-model.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
