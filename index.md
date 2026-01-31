@@ -70,12 +70,12 @@ The Marketing Mix Model (MMM) quantifies the relationship between spend and conv
 
 The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search is at 79%.
 
-**[View Full Model Documentation →](MMM/insurance_marketing-mix-model.md)**
+**[View Full Model Documentation →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/blob/main/Optimization/insurance_optimization.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="insurance-marketing-analytics-decision-engine/MMM/insurance_marketing-mix-model.md">
+<a href="https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/blob/main/Optimization/insurance_optimization.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
