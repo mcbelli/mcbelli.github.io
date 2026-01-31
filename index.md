@@ -108,7 +108,7 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 </td>
 <td width="45%" valign="top">
 
-<a href="Optimization/insurance_optimization.md">
+<a href="../Optimization/insurance_optimization.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
