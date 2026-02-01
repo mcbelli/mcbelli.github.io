@@ -39,13 +39,13 @@ Eight exploratory analyses reveal the key dynamics of insurance marketing:
 
 The EDA surfaces the core insight: **email has the highest ROI despite the lowest lead quality**, because its acquisition cost ($8/lead) is dramatically lower than paid search ($45/lead).
 
-**[View Full EDA →](EDA/insurance_exploratory-analysis.md)**
+**[View Full EDA →](insurance_exploratory-analysis.md)**
 
 </td>
 <td width="45%" valign="top">
 
 
-<a href="EDA/insurance_exploratory-analysis.md">
+<a href="insurance_exploratory-analysis.md">
   <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png" width="100%">
 </a>
 <em>Click to enlarge</em>
