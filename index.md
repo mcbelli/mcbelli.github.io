@@ -45,10 +45,10 @@ The EDA surfaces the core insight: **email has the highest ROI despite the lowes
 <td width="45%" valign="top">
 
 
-<a href="insurance_exploratory-analysis.md">
-  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/EDA/EDA_cross_sell.png" width="100%">
+<a href="../insurance-marketing-analytics-decision-engine/EDA/insurance_exploratory-analysis.md">
+  <img src="../insurance-marketing-analytics-decision-engine/EDA/EDA_cross_sell.png" width="100%">
 </a>
-<em>Click to enlarge</em>
+<em>Click for details</em>
 
 </td>
 </tr>
@@ -70,15 +70,15 @@ The Marketing Mix Model (MMM) quantifies the relationship between spend and conv
 
 The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search is at 79%.
 
-**[View Full Model Documentation →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/blob/main/Optimization/insurance_optimization.md)**
+**[View Full Model Documentation →](../insurance-marketing-analytics-decision-engine/MMM/insurance_marketing-mix-model.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="https://github.com/mcbelli/insurance-marketing-analytics-decision-engine/blob/main/Optimization/insurance_optimization.md">
-  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/MMM/MMM_homepage.png" width="100%">
+<a href="../insurance-marketing-analytics-decision-engine/MMM/insurance_marketing-mix-model.md">
+  <img src="../insurance-marketing-analytics-decision-engine/MMM/MMM_homepage.png" width="100%">
 </a>
-<em>Click to enlarge</em>
+<em>Click for details</em>
 
 </td>
 </tr>
@@ -103,13 +103,13 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 - **+6% higher profit**
 - **20% lower customer acquisition cost**
 
-**[View Optimization Details →](Optimization/insurance_optimization.md)**
+**[View Optimization Details →](../insurance-marketing-analytics-decision-engine/Optimization/insurance_optimization.md)**
 
 </td>
 <td width="45%" valign="top">
 
-<a href="../Optimization/insurance_optimization.md">
-  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Optimization/Optimization_homepage.png" width="100%">
+<a href="../insurance-marketing-analytics-decision-engine/Optimization/insurance_optimization.md">
+  <img src="../insurance-marketing-analytics-decision-engine/Optimization/Optimization_homepage.png" width="100%">
 </a>
 <em>Click to enlarge</em>
 
@@ -121,8 +121,8 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 
 ## 4. Business Impact
 
-<a href="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Business_Impact/Business_Impact_homepage.png">
-  <img src="https://raw.githubusercontent.com/mcbelli/insurance-marketing-analytics-decision-engine/main/Business_Impact/Business_Impact_homepage.png" width="70%">
+<a href="../insurance-marketing-analytics-decision-engine/Business_Impact/Business_Impact_homepage.png">
+  <img src="../insurance-marketing-analytics-decision-engine/Business_Impact/Business_Impact_homepage.png" width="70%">
 </a>
 
 **Bottom line**: By reallocating the same $227K annual marketing budget:
