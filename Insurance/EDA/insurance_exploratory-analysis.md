@@ -1,6 +1,8 @@
-# Exploratory Data Analysis
+---
+---
+   # Exploratory Data Analysis
 
-[← Back to Home](../../mcbelli.github.io/index.md)
+[← Back to Home](../../index.md)
 
 ---
 
@@ -24,7 +26,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 <td width="50%" valign="top">
 
 <a href="EDA_credit_score.png">
-  <img src="EDA_credit_score.png" width="100%">
+  <img src="EDA_credit_score.png width="100%"">
 </a>
 
 </td>
@@ -226,4 +228,4 @@ Do higher-converting channels produce riskier policies? This tests the quality-q
 
 ---
 
-[← Back to Home](../../mcbelli.github.io/index.md) | [Next: Marketing Mix Model →](../MMM/insurance_marketing-mix-model.md)
+[← Back to Home](../../index.md) | [Next: Marketing Mix Model →](../MMM/insurance_marketing-mix-model.md)

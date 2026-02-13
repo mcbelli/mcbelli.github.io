@@ -1,6 +1,9 @@
+---
+---
+
 # Budget Optimization
 
-[← Back to Home](../../mcbelli.github.io/index.md)
+[← Back to Home](../../index.md)
 
 ---
 
@@ -149,4 +152,4 @@ At the optimal allocation:
 
 ---
 
-[← Back to Home](../../mcbelli.github.io/index.md) | [Previous: MMM](../MMM/insurance_marketing-mix-model.md) | [Next: Business Impact →](../../mcbelli.github.io/index.md#4-business-impact)
+[← Back to Home](../../index.md) | [Previous: MMM](../MMM/insurance_marketing-mix-model.md) | [Next: Business Impact →](../../index.md#4-business-impact)

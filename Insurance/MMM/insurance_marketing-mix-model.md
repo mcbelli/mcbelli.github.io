@@ -1,6 +1,8 @@
+---
+---
 # Marketing Mix Model
 
-[← Back to Home](../../mcbelli.github.io/index.md)
+[← Back to Home](../../index.md)
 
 ---
 
