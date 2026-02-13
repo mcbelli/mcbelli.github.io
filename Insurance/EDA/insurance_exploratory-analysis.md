@@ -1,6 +1,7 @@
 ---
 ---
-   # Exploratory Data Analysis
+
+ # Exploratory Data Analysis
 
 [← Back to Home](../../index.md)
 
@@ -26,7 +27,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 <td width="50%" valign="top">
 
 <a href="EDA_credit_score.png">
-  <img src="EDA_credit_score.png width="100%"">
+  <img src="EDA_credit_score.png" width="100%">
 </a>
 
 </td>

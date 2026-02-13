@@ -121,8 +121,8 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 
 ## 4. Business Impact
 
-<a href="Insurance/Business_Impact/Business_Impact_homepage">
-  <img src="Insurance//Business_Impact/Business_Impact_homepage.png" width="70%">
+<a href="Insurance/Business_Impact/Business_Impact_homepage.png">
+  <img src="Insurance/Business_Impact/Business_Impact_homepage.png" width="70%">
 </a>
 
 **Bottom line**: By reallocating the same $227K annual marketing budget:
