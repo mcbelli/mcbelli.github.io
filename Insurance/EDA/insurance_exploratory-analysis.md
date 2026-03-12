@@ -45,8 +45,8 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 Age is the primary rating variable in life and health insurance. The optimal customer age differs by product line.
 
 **Key Finding:** 
-- Life insurance LTV peaks at ages 36-45
-- Health and P&C show different age patterns
+- Life, Health and P&C insurance LTV peak at ages 36-55
+- Conversion Rates show different age patterns across products
 - Targeting should be product-specific
 
 **Implication:** One-size-fits-all age targeting leaves value on the table.
@@ -72,9 +72,9 @@ Age is the primary rating variable in life and health insurance. The optimal cus
 
 Bundled customers have 90%+ retention vs ~80% for single-product. This analysis quantifies the cross-sell opportunity.
 
-**Key Finding:** Multi-product leads convert 2x better and deliver 2x higher lifetime value.
+**Key Finding:** Multi-product leads convert 2x better and deliver similar lifetime value.
 
-**Implication:** Invest in cross-sell programs; the economics strongly favor bundling.
+**Implication:** Invest in cross-sell programs. Conversion rates strongly favor bundling.
 
 </td>
 <td width="50%" valign="top">
@@ -97,9 +97,9 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 
 Insurance is state-regulated—each state has different rate approval processes, coverage mandates, and competitive dynamics.
 
-**Key Finding:** Loss ratios vary significantly by state, from under 50% to over 70%.
+**Key Finding:** Loss ratios vary significantly by state, from under 40% to over 100%!
 
-**Implication:** Geographic risk pricing and targeted underwriting are essential.
+**Implication:** Geographic risk pricing and targeted underwriting are essential. Very high states should be address immediately.
 
 </td>
 <td width="50%" valign="top">
@@ -122,7 +122,7 @@ Insurance is state-regulated—each state has different rate approval processes,
 
 Cheaper acquisition channels attract higher-risk customers. This analysis quantifies the adverse selection effect.
 
-**Key Finding:** Email channel (lowest CPL) has 17% higher early claim rates than paid search.
+**Key Finding:** Email channel (lowest CPL) has higher loss rates than either paid search or paid social.
 
 **Implication:** Channel-level risk adjustment may be needed in pricing.
 
@@ -147,7 +147,7 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 
 What matters for budget allocation is **profit per marketing dollar**, not profit per policy. A channel with lower profit per policy can still be better if acquisition costs are low enough.
 
-**Key Finding:** Email has the highest ROI (10.7x) despite lower profit per policy, because acquisition cost is dramatically lower.
+**Key Finding:** Email has the highest ROI despite lower profit per policy, because acquisition cost is dramatically lower.
 
 **Implication:** Shift budget toward email to maximize total profit.
 
@@ -218,13 +218,13 @@ Do higher-converting channels produce riskier policies? This tests the quality-q
 
 | Analysis | Key Finding | Action |
 |----------|-------------|--------|
-| Credit Score | 3x conversion, 20pt lower loss ratio for Excellent | Prioritize high-credit leads |
-| Age Bands | LTV varies 2x by age within product | Product-specific targeting |
-| Cross-Sell | 2x conversion, 2x LTV for multi-product | Invest in bundling |
-| Geographic | 20+ pt loss ratio variation by state | State-level rate adequacy |
-| Adverse Selection | 17% higher early claims for cheap channels | Channel risk adjustment |
-| Channel ROI | Email 10.7x vs Search 5.7x | Shift budget to email |
-| State Claims | 5 high-risk states identified | Underwriting review |
+| Credit Score | Higher conversion, lower loss ratio for Excellent | Prioritize high-credit leads |
+| Age Bands | Conversion varies by age within product | Product-specific targeting |
+| Cross-Sell | Higher conversion for multi-product | Invest in bundling |
+| Geographic | Huge loss ratio variation by state | State-level rate adequacy |
+| Adverse Selection | higher early claims for cheap channels | Channel risk adjustment |
+| Channel ROI | Email 2-3x ROI vs Search and Social | Shift budget to email |
+| State Claims | High-risk states identified | Underwriting review |
 | Bind vs Claims | r=0.43 correlation | Balance volume vs quality |
 
 ---
