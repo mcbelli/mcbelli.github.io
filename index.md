@@ -8,7 +8,9 @@
 
 ## Insurance Marketing Analytics Decision Engine
 
-This project demonstrates an end-to-end analytics workflow for a B2C insurance company: from exploratory analysis through predictive modeling to budget optimization and business impact measurement. The data are synthetic but designed to reflect realistic insurance marketing dynamics.
+This is a self-directed demonstration project. It walks an end-to-end analytics workflow for a B2C insurance company — from exploratory analysis through predictive modeling to budget optimization and business-impact measurement — to show *how I approach the work*.
+
+> **Note on the data:** Everything here runs on a synthetic dataset I generated to mirror realistic insurance-marketing dynamics. The figures throughout are outputs of that simulation, included to illustrate the methodology end to end — not results from a client engagement.
 
 **[View Repository →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine)**
 
@@ -16,7 +18,7 @@ This project demonstrates an end-to-end analytics workflow for a B2C insurance c
 
 ## The Business Problem
 
-In insurance, growth without risk discipline destroys value. Marketing teams optimize for lead volume and cost-per-lead, but cheap leads often become unprofitable policies. This project answers:
+In insurance, growth without risk discipline destroys value. Marketing teams optimize for lead volume and cost-per-lead, but cheap leads often become unprofitable policies. This project works through three questions:
 
 1. Which marketing channels drive *profitable* growth—not just volume?
 2. How do we model the diminishing returns of marketing spend?
@@ -28,7 +30,7 @@ In insurance, growth without risk discipline destroys value. Marketing teams opt
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="55%" valign="top" markdown="1">
 
 Eight exploratory analyses reveal the key dynamics of insurance marketing:
 
@@ -60,7 +62,7 @@ The EDA surfaces the core insight: **email has the highest ROI despite the lowes
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="55%" valign="top" markdown="1">
 
 The Marketing Mix Model (MMM) quantifies the relationship between spend and conversions using **Hill saturation curves**:
 
@@ -90,7 +92,7 @@ The model reveals that email is operating at just 8% of its half-saturation poin
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="55%" valign="top" markdown="1">
 
 Using the fitted response curves, we simulate two scenarios:
 
@@ -125,7 +127,7 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
   <img src="Insurance/Business_Impact/Business_Impact_homepage.png" width="70%">
 </a>
 
-**Bottom line**: By reallocating the same $227K annual marketing budget:
+**Within the simulation**, reallocating the same modeled $227K annual marketing budget produces:
 
 | Metric | Before | After | Change |
 |--------|--------|-------|--------|
@@ -133,6 +135,8 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 | Lifetime Revenue | $14.4M | $17.9M | **+$3.6M** |
 | Policy Profit | $1.7M | $1.8M | **+$102K** |
 | CAC | $304 | $244 | **-20%** |
+
+*(Profit rises far less than conversions because the reallocation leans into email — high ROI on acquisition cost, but lower-margin policies. Surfacing that trade-off is exactly the point of the model.)*
 
 ---
 
@@ -162,8 +166,11 @@ I'm an analytics leader with 20+ years of experience developing data-driven stra
 
 ---
 
-## Contact
+## Let's Connect
 
-- **Email:** [bellimike23@gmail.com](mailto:bellimike23@gmail.com)
+I'm open to analytics leadership roles and consulting engagements.
+
+- **Consulting & services:** [mikebelli.com](https://www.mikebelli.com)
 - **LinkedIn:** [linkedin.com/in/michaelbelli](https://www.linkedin.com/in/michaelbelli/)
 - **GitHub:** [github.com/mcbelli](https://github.com/mcbelli)
+- **Email:** [bellimike23@gmail.com](mailto:bellimike23@gmail.com)
