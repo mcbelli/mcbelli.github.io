@@ -1,6 +1,6 @@
 # Michael Belli
 
-**Analytics Leader | 20+ Years Experience | Data-Driven Strategy**
+**Analytics Leader · 20+ Years Experience · Data-Driven Strategy**
 
 [LinkedIn](https://www.linkedin.com/in/michaelbelli/) | [GitHub](https://github.com/mcbelli) | [Email](mailto:bellimike23@gmail.com)
 
