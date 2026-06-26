@@ -24,6 +24,7 @@ The model uses a **two-stage approach**:
 This separation produces tighter fits because the spend→conversions relationship is more direct than spend→profit (which includes claim variance).
 
 **Model Fit (R²):**
+
 | Channel | R² |
 |---------|-----|
 | Search | 0.26 |

@@ -1,7 +1,7 @@
 ---
 ---
 
- # Exploratory Data Analysis
+# Exploratory Data Analysis
 
 [← Back to Home](../../index.md)
 
