@@ -289,7 +289,7 @@ def analysis_5_early_claims(leads, search_spend, social_spend):
     total_search_spend = search_spend['spend'].sum()
     total_social_spend = social_spend['spend'].sum()
     email_leads_count = len(leads[leads['channel'] == 'email']['lead_id'].unique())
-    total_email_spend = email_leads_count * 8.0
+    total_email_spend = pd.read_csv(DATA_DIR / 'email_daily_spend.csv')['spend'].sum()
 
     channel_spend = {
         'paid_search': total_search_spend,
@@ -357,7 +357,7 @@ def analysis_6_policy_profitability(leads, search_spend, social_spend):
     
     # Estimate email spend from CPL ($8) × number of email leads
     email_leads_count = len(leads[leads['channel'] == 'email']['lead_id'].unique())
-    total_email_spend = email_leads_count * 8.0
+    total_email_spend = pd.read_csv(DATA_DIR / 'email_daily_spend.csv')['spend'].sum()
     
     channel_spend = {
         'paid_search': total_search_spend,

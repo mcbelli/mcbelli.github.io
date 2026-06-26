@@ -70,7 +70,7 @@ The Marketing Mix Model (MMM) quantifies the relationship between spend and conv
 - **Unit economics** (avg profit per conversion) vary by channel
 - **ROI-saturation constraint** ensures high-ROI channels aren't mistakenly labeled as "saturated"
 
-The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search is at 79%.
+The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search and social are both near 70%.
 
 **[View Full Model Documentation →](Insurance/MMM/insurance_marketing-mix-model)**
 
@@ -99,11 +99,11 @@ Using the fitted response curves, we simulate two scenarios:
 - **Period 1 (Current)**: Historical budget allocation
 - **Period 2 (Optimal)**: Budget reallocated to equalize marginal ROI across channels
 
-With the **same total marketing spend**, the optimal allocation shifts ~$600/week from social to email, yielding:
+With the **same total marketing spend**, the optimal allocation shifts ~$4,800/month out of search and social into under-saturated email, yielding:
 
-- **+25% more conversions**
-- **+6% higher profit**
-- **20% lower customer acquisition cost**
+- **+12.8% more conversions**
+- **+5.9% higher profit**
+- **11% lower customer acquisition cost**
 
 **[View Optimization Details →](Insurance/Optimization/insurance_optimization)**
 
@@ -127,14 +127,14 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
   <img src="Insurance/Business_Impact/Business_Impact_homepage.png" width="70%">
 </a>
 
-**Within the simulation**, reallocating the same modeled $227K annual marketing budget produces:
+**Within the simulation**, reallocating the same modeled $308K annual marketing budget produces:
 
 | Metric | Before | After | Change |
 |--------|--------|-------|--------|
-| New Customers | 746 | 931 | **+24.8%** |
-| Lifetime Revenue | $14.4M | $17.9M | **+$3.6M** |
-| Policy Profit | $1.7M | $1.8M | **+$102K** |
-| CAC | $304 | $244 | **-20%** |
+| New Customers | 957 | 1,079 | **+12.8%** |
+| Lifetime Revenue | $18.4M | $20.8M | **+$2.4M** |
+| Policy Profit | $3.49M | $3.69M | **+$205K** |
+| CAC | $322 | $286 | **-11%** |
 
 *(Profit rises far less than conversions because the reallocation leans into email — high ROI on acquisition cost, but lower-margin policies. Surfacing that trade-off is exactly the point of the model.)*
 
@@ -144,10 +144,10 @@ With the **same total marketing spend**, the optimal allocation shifts ~$600/wee
 
 **Data Generation:** Python script creating synthetic but realistic insurance marketing data with:
 - 3 years of lead data across 3 products (Health, Life, Property/Casualty)
-- 3 marketing channels with quality/cost trade-offs
-- Full sales funnel with claims simulation
+- 3 marketing channels with quality/cost trade-offs, where daily spend varies widely (budget regimes and experiments) and leads follow a saturating response to spend
+- Full sales funnel with claims simulation, plus cross-sell dynamics (bundled customers convert better and retain longer)
 
-**Modeling:** Hill saturation functions with ROI-based constraints, fit using nonlinear least squares.
+**Modeling:** Hill saturation functions with an ROI-based constraint, fit on monthly-aggregated data using nonlinear least squares.
 
 **Optimization:** Profit-maximizing budget allocation using scipy.optimize.
 
