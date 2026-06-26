@@ -15,7 +15,7 @@ This page presents eight exploratory analyses that reveal the key dynamics of in
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Credit-based insurance scores are a major underwriting tool. This analysis validates that better credit correlates with **both** higher conversion rates AND lower claims.
 
@@ -24,7 +24,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 **Implication:** Credit score should inform lead prioritization, not just pricing.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_credit_score.png">
   <img src="EDA_credit_score.png" width="100%">
@@ -40,7 +40,7 @@ Credit-based insurance scores are a major underwriting tool. This analysis valid
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Age is the primary rating variable in life and health insurance. The optimal customer age differs by product line.
 
@@ -52,7 +52,7 @@ Age is the primary rating variable in life and health insurance. The optimal cus
 **Implication:** One-size-fits-all age targeting leaves value on the table.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_age_bands.png">
   <img src="EDA_age_bands.png" width="100%">
@@ -68,7 +68,7 @@ Age is the primary rating variable in life and health insurance. The optimal cus
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Bundled customers have 90%+ retention vs ~80% for single-product. This analysis quantifies the cross-sell opportunity.
 
@@ -77,7 +77,7 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 **Implication:** Invest in cross-sell programs. Conversion rates strongly favor bundling.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_cross_sell.png">
   <img src="EDA_cross_sell.png" width="100%">
@@ -93,7 +93,7 @@ Bundled customers have 90%+ retention vs ~80% for single-product. This analysis 
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Insurance is state-regulated—each state has different rate approval processes, coverage mandates, and competitive dynamics.
 
@@ -102,7 +102,7 @@ Insurance is state-regulated—each state has different rate approval processes,
 **Implication:** Geographic risk pricing and targeted underwriting are essential. Very high states should be address immediately.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_geographic.png">
   <img src="EDA_geographic.png" width="100%">
@@ -118,7 +118,7 @@ Insurance is state-regulated—each state has different rate approval processes,
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Cheaper acquisition channels attract higher-risk customers. This analysis quantifies the adverse selection effect.
 
@@ -127,7 +127,7 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 **Implication:** Channel-level risk adjustment may be needed in pricing.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_early_claims.png">
   <img src="EDA_early_claims.png" width="100%">
@@ -143,7 +143,7 @@ Cheaper acquisition channels attract higher-risk customers. This analysis quanti
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 What matters for budget allocation is **profit per marketing dollar**, not profit per policy. A channel with lower profit per policy can still be better if acquisition costs are low enough.
 
@@ -152,7 +152,7 @@ What matters for budget allocation is **profit per marketing dollar**, not profi
 **Implication:** Shift budget toward email to maximize total profit.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_policy_profitability.png">
   <img src="EDA_policy_profitability.png" width="100%">
@@ -168,7 +168,7 @@ What matters for budget allocation is **profit per marketing dollar**, not profi
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Identifying geographic risk concentration to inform pricing and underwriting decisions.
 
@@ -177,7 +177,7 @@ Identifying geographic risk concentration to inform pricing and underwriting dec
 **Implication:** State-level performance monitoring should be routine.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_state_claims.png">
   <img src="EDA_state_claims.png" width="100%">
@@ -193,7 +193,7 @@ Identifying geographic risk concentration to inform pricing and underwriting dec
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 Do higher-converting channels produce riskier policies? This tests the quality-quantity trade-off.
 
@@ -202,7 +202,7 @@ Do higher-converting channels produce riskier policies? This tests the quality-q
 **Implication:** Conversion optimization must be balanced against underwriting quality.
 
 </td>
-<td width="50%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
 <a href="EDA_bind_vs_claims.png">
   <img src="EDA_bind_vs_claims.png" width="100%">

@@ -14,7 +14,7 @@ This page documents the Marketing Mix Model (MMM) that quantifies the relationsh
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="55%" valign="top" markdown="1">
 
 The model uses a **two-stage approach**:
 
@@ -149,4 +149,4 @@ The optimization shifts ~$600/week from social (near half-saturation) to email (
 
 ---
 
-[← Back to Home](../../mcbelli.github.io/index.md) | [Previous: EDA](../EDA/insurance_exploratory-analysis.md) | [Next: Optimization →](../Optimization/insurance_optimization.md)
+[← Back to Home](../../index.md) | [Previous: EDA](../EDA/insurance_exploratory-analysis.md) | [Next: Optimization →](../Optimization/insurance_optimization.md)

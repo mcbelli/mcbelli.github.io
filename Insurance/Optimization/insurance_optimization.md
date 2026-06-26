@@ -15,7 +15,7 @@ This page documents the budget optimization simulation that compares current all
 
 <table>
 <tr>
-<td width="55%" valign="top">
+<td width="55%" valign="top" markdown="1">
 
 Using the fitted response curves from the Marketing Mix Model, we simulate two scenarios over a 52-week period:
 
