@@ -1,0 +1,8 @@
+# Python dependencies for the MMM timing-bias simulation.
+# Version floors reflect what the project was developed and verified against;
+# newer compatible releases should also work.
+numpy>=1.26
+pandas>=2.0
+matplotlib>=3.8
+statsmodels>=0.14
+scikit-learn>=1.3

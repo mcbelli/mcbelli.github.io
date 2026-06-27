@@ -6,150 +6,58 @@
 
 ---
 
-## Insurance Marketing Analytics Decision Engine
+## Welcome
 
-This is a self-directed demonstration project. It walks an end-to-end analytics workflow for a B2C insurance company — from exploratory analysis through predictive modeling to budget optimization and business-impact measurement — to show *how I approach the work*.
+I'm an analytics leader who turns marketing and customer data into decisions executives can act on. This portfolio is a small set of **self-directed, end-to-end projects** — each built on synthetic data I generated, so the methodology is fully visible and reproducible from raw data through to a business recommendation.
 
-> **Note on the data:** Everything here runs on a synthetic dataset I generated to mirror realistic insurance-marketing dynamics. The figures throughout are outputs of that simulation, included to illustrate the methodology end to end — not results from a client engagement.
+Each project is meant to show *how I think*, not just what I can model: how I frame the business question, where the analysis can mislead, and what the honest takeaway is. Pick a project below to dig in.
 
-**[View Repository →](https://github.com/mcbelli/insurance-marketing-analytics-decision-engine)**
-
----
-
-## The Business Problem
-
-In insurance, growth without risk discipline destroys value. Marketing teams optimize for lead volume and cost-per-lead, but cheap leads often become unprofitable policies. This project works through three questions:
-
-1. Which marketing channels drive *profitable* growth—not just volume?
-2. How do we model the diminishing returns of marketing spend?
-3. Where should we reallocate budget to maximize lifetime value?
+> **A note on the data:** Every figure here is an output of a simulation I wrote, not a client engagement. Working from a known ground truth is deliberate — it's the only way to check whether a model actually recovers the truth, which is the whole point of the second project.
 
 ---
 
-## 1. Exploratory Data Analysis
+## Projects
 
 <table>
 <tr>
-<td width="55%" valign="top" markdown="1">
+<td width="50%" valign="top" markdown="1">
 
-Eight exploratory analyses reveal the key dynamics of insurance marketing:
+### Insurance Marketing Analytics Decision Engine
 
-- **Credit score** strongly predicts both conversion and claims risk
-- **Channel quality varies**: cheaper leads have higher loss ratios
-- **Cross-sell customers** have 2x higher lifetime value
-- **Geographic variation** requires state-level pricing adjustments
+An end-to-end analytics workflow for a B2C insurer — exploratory analysis, a Hill-saturation marketing mix model, profit-maximizing budget optimization, and business-impact measurement. The throughline: in insurance, **cheap leads often become unprofitable policies**, so growth has to be measured in profit and lifetime value, not lead volume.
 
-The EDA surfaces the core insight: **email has the highest ROI despite the lowest lead quality**, because its acquisition cost ($8/lead) is dramatically lower than paid search ($45/lead).
-
-**[View Full EDA →](Insurance/EDA/insurance_exploratory-analysis)**
+**[Explore the project →](Insurance/insurance)**
 
 </td>
-<td width="45%" valign="top">
+<td width="50%" valign="top" markdown="1">
 
+### When a Marketing Mix Model Fits Well and Still Points the Wrong Way
 
-<a href="Insurance/EDA/insurance_exploratory-analysis">
+A focused cautionary tale: a marketing mix model can post a strong fit — high R², low error — and still recommend cutting your *better* channel. Here the culprit isn't the model; it's a **billing-date timing lag in the data**. Built on a known ground truth, the project shows four increasingly sophisticated models all getting the budget call backwards, and why the fix lives in the data, not the model.
+
+**[Explore the project →](MMM_Bias/mmm_good-fit-wrong-direction)**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+<a href="Insurance/insurance">
   <img src="Insurance/EDA/EDA_cross_sell.png" width="100%">
 </a>
-<em>Click for details</em>
+<em>Click to open</em>
+
+</td>
+<td width="50%" valign="top">
+
+<a href="MMM_Bias/mmm_good-fit-wrong-direction">
+  <img src="MMM_Bias/mmm_coefficients.png" width="100%">
+</a>
+<em>Click to open</em>
 
 </td>
 </tr>
 </table>
-
----
-
-## 2. Marketing Mix Model
-
-<table>
-<tr>
-<td width="55%" valign="top" markdown="1">
-
-The Marketing Mix Model (MMM) quantifies the relationship between spend and conversions using **Hill saturation curves**:
-
-- **Response curves** capture diminishing returns at higher spend levels
-- **Unit economics** (avg profit per conversion) vary by channel
-- **ROI-saturation constraint** ensures high-ROI channels aren't mistakenly labeled as "saturated"
-
-The model reveals that email is operating at just 8% of its half-saturation point—significant room to scale—while search and social are both near 70%.
-
-**[View Full Model Documentation →](Insurance/MMM/insurance_marketing-mix-model)**
-
-</td>
-<td width="45%" valign="top">
-
-<a href="Insurance/MMM/insurance_marketing-mix-model">
-  <img src="Insurance/MMM/MMM_homepage.png" width="100%">
-</a>
-<em>Click for details</em>
-
-</td>
-</tr>
-</table>
-
----
-
-## 3. Budget Optimization
-
-<table>
-<tr>
-<td width="55%" valign="top" markdown="1">
-
-Using the fitted response curves, we simulate two scenarios:
-
-- **Period 1 (Current)**: Historical budget allocation
-- **Period 2 (Optimal)**: Budget reallocated to equalize marginal ROI across channels
-
-With the **same total marketing spend**, the optimal allocation shifts ~$4,800/month out of search and social into under-saturated email, yielding:
-
-- **+12.8% more conversions**
-- **+5.9% higher profit**
-- **11% lower customer acquisition cost**
-
-**[View Optimization Details →](Insurance/Optimization/insurance_optimization)**
-
-</td>
-<td width="45%" valign="top">
-
-<a href="Insurance/Optimization/insurance_optimization">
-  <img src="Insurance/Optimization/Optimization_homepage.png" width="100%">
-</a>
-<em>Click to enlarge</em>
-
-</td>
-</tr>
-</table>
-
----
-
-## 4. Business Impact
-
-<a href="Insurance/Business_Impact/Business_Impact_homepage.png">
-  <img src="Insurance/Business_Impact/Business_Impact_homepage.png" width="70%">
-</a>
-
-**Within the simulation**, reallocating the same modeled $308K annual marketing budget produces:
-
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| New Customers | 957 | 1,079 | **+12.8%** |
-| Lifetime Revenue | $18.4M | $20.8M | **+$2.4M** |
-| Policy Profit | $3.49M | $3.69M | **+$205K** |
-| CAC | $322 | $286 | **-11%** |
-
-*(Profit rises far less than conversions because the reallocation leans into email — high ROI on acquisition cost, but lower-margin policies. Surfacing that trade-off is exactly the point of the model.)*
-
----
-
-## Technical Implementation
-
-**Data Generation:** Python script creating synthetic but realistic insurance marketing data with:
-- 3 years of lead data across 3 products (Health, Life, Property/Casualty)
-- 3 marketing channels with quality/cost trade-offs, where daily spend varies widely (budget regimes and experiments) and leads follow a saturating response to spend
-- Full sales funnel with claims simulation, plus cross-sell dynamics (bundled customers convert better and retain longer)
-
-**Modeling:** Hill saturation functions with an ROI-based constraint, fit on monthly-aggregated data using nonlinear least squares.
-
-**Optimization:** Profit-maximizing budget allocation using scipy.optimize.
 
 ---
 
