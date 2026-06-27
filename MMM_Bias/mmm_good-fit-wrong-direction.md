@@ -18,19 +18,19 @@ The point is not that MMMs are bad. The point is that **overall fit is the wrong
 
 ## The Setup
 
-<table>
-<tr>
-<td width="55%" valign="top" markdown="1">
-
 The data is 104 weeks of simulated weekly leads driven by two channels, with a known data-generating process:
 
 ```
 leads(t) = 400
-  + 30 * adstock(direct_mail_actual)(t)  # DM is STRONGER
-  + 25 * digital_spend(t)
-  + 0.35 * leads(t-1)                     # organic carry-over
-  + noise
+         + 30 * adstock(direct_mail_actual)(t)   # DM is the STRONGER channel
+         + 25 * digital_spend(t)
+         + 0.35 * leads(t-1)                       # organic carry-over
+         + noise
 ```
+
+<table>
+<tr>
+<td width="55%" valign="top" markdown="1">
 
 Two facts about the channels are the whole story:
 
@@ -75,10 +75,6 @@ Model 4 is deliberately the strongest, most defensible model in the lineup — t
 
 ## What the Models Recover
 
-<table>
-<tr>
-<td width="55%" valign="top" markdown="1">
-
 True impact is DM = 30 leads/\$1K, digital = 25. The models, reading billed DM, recover something very different:
 
 | | Direct mail | Digital |
@@ -90,25 +86,14 @@ True impact is DM = 30 leads/\$1K, digital = 25. The models, reading billed DM, 
 
 Every model puts direct mail **at or below zero** and distorts the channels in ways that make DM look like the weaker bet. The billing shift moves the DM signal away from the leads it caused, the AR and adstock terms absorb what structure remains, and digital — cleanly timed — gets credited for the rest.
 
-</td>
-<td width="45%" valign="top">
-
 <a href="mmm_coefficients.png">
-  <img src="mmm_coefficients.png" width="100%">
+  <img src="mmm_coefficients.png" width="80%">
 </a>
 <em>True vs. estimated coefficients with 95% confidence intervals. Click to enlarge.</em>
-
-</td>
-</tr>
-</table>
 
 ---
 
 ## The Consequence: a Grounded Budget Shift
-
-<table>
-<tr>
-<td width="55%" valign="top" markdown="1">
 
 `shift_analysis.py` makes the cost concrete for a single 10-week window (weeks 51–60), moving \$20K out of direct mail and into digital (~\$2K/week against a ~\$5K/week baseline in each channel). Total budget is unchanged.
 
@@ -120,17 +105,10 @@ Every model puts direct mail **at or below zero** and distorts the channels in w
 
 The model promises a large gain from a move that, in truth, slightly *reduces* leads. It gets the **direction** wrong and is wildly overconfident about the **size**. Because the two channels are genuinely close in value (30 vs 25), the real cost is small — the headline isn't "catastrophe," it's "the model can't even tell you the sign, and sells the move as a big win."
 
-</td>
-<td width="45%" valign="top">
-
 <a href="mmm_model4_impact.png">
-  <img src="mmm_model4_impact.png" width="100%">
+  <img src="mmm_model4_impact.png" width="80%">
 </a>
 <em>Model 4's predicted impact of the budget shift versus the true outcome. Click to enlarge.</em>
-
-</td>
-</tr>
-</table>
 
 ---
 
