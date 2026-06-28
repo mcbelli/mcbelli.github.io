@@ -78,7 +78,6 @@ I'm an analytics leader with 20+ years of experience developing data-driven stra
 
 I'm open to analytics leadership roles and consulting engagements.
 
-- **Consulting & services:** [mikebelli.com](https://www.mikebelli.com)
 - **LinkedIn:** [linkedin.com/in/michaelbelli](https://www.linkedin.com/in/michaelbelli/)
 - **GitHub:** [github.com/mcbelli](https://github.com/mcbelli)
 - **Email:** [bellimike23@gmail.com](mailto:bellimike23@gmail.com)
