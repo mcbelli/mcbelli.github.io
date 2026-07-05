@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direct Mail Targeting: Same Budget, Twice the ROI</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  :root{--navy:#1f3a5f;--teal:#2a9d8f;--red:#c1443c;--gray:#9aa5b1;--bg:#fafbfc;--ink:#26313d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.65}
+  header{background:var(--navy);color:#fff;padding:56px 20px 48px;text-align:center}
+  header h1{font-size:2rem;max-width:760px;margin:0 auto 14px}
+  header p{max-width:680px;margin:0 auto;font-size:1.08rem;color:#cdd8e4}
+  main{max-width:880px;margin:0 auto;padding:20px}
+  section{margin:44px 0}
+  h2{font-family:Helvetica,Arial,sans-serif;color:var(--navy);font-size:1.35rem;margin-bottom:12px}
+  p{margin-bottom:12px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+  .card{background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:18px;text-align:center}
+  .card .big{font-family:Helvetica,Arial,sans-serif;font-size:1.7rem;font-weight:700;color:var(--teal)}
+  .card .big.neutral{color:var(--navy)}
+  .card .label{font-size:.85rem;color:#5b6774;margin-top:4px}
+  .chart-box{background:#fff;border:1px solid #e3e8ee;border-radius:8px;padding:18px;margin:18px 0}
+  table{width:100%;border-collapse:collapse;background:#fff;font-family:Helvetica,Arial,sans-serif;font-size:.88rem}
+  th,td{padding:8px 10px;border-bottom:1px solid #e3e8ee;text-align:right}
+  th{background:var(--navy);color:#fff;font-weight:600}
+  td:first-child,th:first-child{text-align:center}
+  tr.cut td{border-bottom:3px double var(--red)}
+  .pos{color:var(--teal);font-weight:600}.neg{color:var(--red);font-weight:600}
+  .note{font-size:.85rem;color:#5b6774;font-style:italic}
+  footer{text-align:center;padding:34px 20px;color:#5b6774;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <p style="margin-bottom:14px"><a href="https://mcbelli.github.io/" style="color:#cdd8e4;font-family:Helvetica,Arial,sans-serif;font-size:.9rem;text-decoration:none">&larr; Michael Belli &mdash; Home</a></p>
+  <h1>Stop mailing everyone. Mail the ones worth mailing.</h1>
+  <p>A simulated direct-mail campaign to 100,000 households shows how a targeting
+     model &mdash; scoring prospects and mailing only the deciles worth the postage &mdash;
+     cuts pieces 40% and more than doubles ROI.</p>
+</header>
+<main>
+
+<section>
+  <h2>The setup</h2>
+  <p>A high-value acquisition program: each sale is worth <strong>$1,000</strong>, each mail
+     piece costs <strong>$1.50</strong>. The file has 100,000 prospect households with income,
+     net worth, a modeled cruise-ship likelihood, and prior direct-mail response frequency.
+     A random <strong>10% holdout</strong> receives no mail, so we can measure what mail
+     actually <em>causes</em> &mdash; some people buy anyway.</p>
+  <p>Without a model, you mail all ~90,000 non-holdout households. With a model, you score
+     every household, rank the file into deciles (decile 1 = best 10%), and mail only where
+     the expected incremental sales cover the postage.</p>
+</section>
+
+<section>
+  <h2>What the model finds</h2>
+  <p>A logistic regression trained on the mailed households' outcomes separates the file
+     sharply: the top decile responds at <strong>0.75%</strong>, eleven times the bottom
+     decile's 0.07%. The dashed line is breakeven &mdash; the response rate at which
+     incremental sales just cover mail cost. Deciles 1&ndash;6 clear it; 7&ndash;10 lose money
+     on every piece.</p>
+  <div class="chart-box"><canvas id="rateChart" height="120"></canvas></div>
+  <div class="chart-box"><canvas id="netChart" height="120"></canvas></div>
+</section>
+
+<section>
+  <h2>The bottom line</h2>
+  <p>Mail six deciles instead of ten. You give up a handful of sales in the bottom four
+     deciles &mdash; but those sales cost more in postage than they bring in.</p>
+  <div class="cards">
+    <div class="card"><div class="big neutral">&minus;35,965</div><div class="label">fewer pieces mailed<br>(89,806 &rarr; 53,841)</div></div>
+    <div class="card"><div class="big">+$22,147</div><div class="label">more net profit<br>($60,191 &rarr; $82,338)</div></div>
+    <div class="card"><div class="big">45% &rarr; 102%</div><div class="label">ROI on mail spend<br>more than doubled</div></div>
+    <div class="card"><div class="big neutral">84%</div><div class="label">of incremental sales kept<br>(163 of 195)</div></div>
+  </div>
+  <div class="chart-box"><canvas id="scenarioChart" height="110"></canvas></div>
+</section>
+
+<section>
+  <h2>Decile detail</h2>
+  <table id="decTable">
+    <thead><tr>
+      <th>Decile</th><th>Pieces</th><th>Response</th><th>Incremental sales</th><th>Net $</th><th>ROI</th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+  <p class="note" style="margin-top:10px">Everything below the double line loses money:
+     the model tells you exactly where to stop. Incremental sales are mailed sales minus the
+     sales the holdout group shows would have happened anyway (mail lifts response ~5x here).</p>
+</section>
+
+<section>
+  <h2>How the simulation works</h2>
+  <p>The data comes from a transparent, reproducible Python simulation: a hidden response
+     propensity drives each household's chance of buying, mail multiplies the odds ~6&times;,
+     and the model has to rediscover the pattern from the mailed outcomes alone &mdash; just
+     like a real campaign. Three short scripts: generate the data, fit and decile the model,
+     compare the economics.</p>
+</section>
+
+</main>
+<footer>Simulated data, real method. <a href="https://mcbelli.github.io/" style="color:#5b6774">Michael Belli</a> &mdash; <a href="https://mcbelli.github.io/DM_ROI/dm_same-budget-double-the-roi" style="color:#5b6774">full write-up</a> &middot; <a href="https://github.com/mcbelli/dm-targeting-roi" style="color:#5b6774">code repository</a></footer>
+
+<script>
+const D = {
+  decile:[1,2,3,4,5,6,7,8,9,10],
+  pieces:[8936,8999,8987,8976,8979,8964,9030,9004,8965,8966],
+  ratePct:[0.7498,0.3889,0.3895,0.2451,0.2562,0.2008,0.155,0.1333,0.0781,0.0669],
+  incr:[54.7,28.5,28.5,17.9,18.8,14.7,11.4,9.8,5.7,4.9],
+  net:[41296,15002,15020,4436,5332,1254,-2145,-3706,-7748,-8549],
+  roi:[3.08,1.11,1.11,0.33,0.40,0.09,-0.16,-0.27,-0.58,-0.64],
+  cutoff:6, breakevenPct:0.184
+};
+const TEAL='#2a9d8f', GRAY='#9aa5b1', RED='#c1443c', NAVY='#1f3a5f';
+const barColors = D.decile.map(d => d <= D.cutoff ? TEAL : GRAY);
+Chart.defaults.font.family = "Helvetica, Arial, sans-serif";
+
+new Chart(document.getElementById('rateChart'), {
+  type:'bar',
+  data:{labels:D.decile, datasets:[{label:'Mailed response rate (%)', data:D.ratePct, backgroundColor:barColors}]},
+  options:{plugins:{title:{display:true,text:'Response rate by model decile (1 = best)'},
+    legend:{display:false},
+    annotation:undefined,
+    tooltip:{callbacks:{label:c=>c.parsed.y.toFixed(2)+'% response'}}},
+    scales:{y:{title:{display:true,text:'Response rate (%)'}}}}
+});
+// breakeven line drawn as a second dataset
+const rc = Chart.getChart('rateChart');
+rc.data.datasets.push({type:'line',label:'Breakeven',data:D.decile.map(()=>D.breakevenPct),
+  borderColor:RED,borderDash:[6,4],pointRadius:0,borderWidth:2});
+rc.options.plugins.legend.display=true;
+rc.update();
+
+new Chart(document.getElementById('netChart'), {
+  type:'bar',
+  data:{labels:D.decile, datasets:[{data:D.net, backgroundColor:D.net.map(n=>n>0?TEAL:RED)}]},
+  options:{plugins:{title:{display:true,text:"Each decile's net contribution (incremental value − mail cost)"},
+    legend:{display:false},
+    tooltip:{callbacks:{label:c=>'$'+c.parsed.y.toLocaleString()}}},
+    scales:{y:{ticks:{callback:v=>'$'+v.toLocaleString()}}}}
+});
+
+new Chart(document.getElementById('scenarioChart'), {
+  type:'bar',
+  data:{labels:['Pieces mailed (000s)','Net profit ($000s)','ROI (%)'],
+    datasets:[
+      {label:'No model - mail everyone', data:[89.8,60.2,45], backgroundColor:GRAY},
+      {label:'With model - mail deciles 1-6', data:[53.8,82.3,102], backgroundColor:TEAL}]},
+  options:{plugins:{title:{display:true,text:'Same file, same economics - fewer, smarter pieces'}}}
+});
+
+const tb = document.querySelector('#decTable tbody');
+D.decile.forEach((d,i)=>{
+  const tr=document.createElement('tr');
+  if(d===D.cutoff) tr.className='cut';
+  const roiCls = D.roi[i]>=0?'pos':'neg', netCls = D.net[i]>=0?'pos':'neg';
+  tr.innerHTML='<td>'+d+'</td><td>'+D.pieces[i].toLocaleString()+'</td><td>'+D.ratePct[i].toFixed(2)+
+    '%</td><td>'+D.incr[i]+'</td><td class="'+netCls+'">$'+D.net[i].toLocaleString()+
+    '</td><td class="'+roiCls+'">'+Math.round(D.roi[i]*100)+'%</td>';
+  tb.appendChild(tr);
+});
+</script>
+</body>
+</html>
