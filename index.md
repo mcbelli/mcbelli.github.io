@@ -57,6 +57,27 @@ A focused cautionary tale: a marketing mix model can post a strong fit — high 
 
 </td>
 </tr>
+
+<tr>
+<td width="50%" valign="top" markdown="1">
+### Direct Mail Targeting: Mail Less, Make More
+A simulated 100,000-household direct-mail campaign showing what a targeting model is worth in dollars. Scoring the file into deciles and mailing only where incremental sales cover the postage cuts pieces 40% and **more than doubles ROI (45% → 102%)** — the model isn't just a prediction, it's a stopping rule that prices out exactly where in the file to stop mailing.
+**[Explore the project →](DM_ROI/dm_same-budget-double-the-roi)**
+</td>
+<td width="50%" valign="top" markdown="1">
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="DM_ROI/dm_same-budget-double-the-roi">
+  <img src="DM_ROI/dm_scenarios.png" width="100%">
+</a>
+<em>Click to open</em>
+</td>
+<td width="50%" valign="top">
+</td>
+</tr>
+
 </table>
 
 ---
