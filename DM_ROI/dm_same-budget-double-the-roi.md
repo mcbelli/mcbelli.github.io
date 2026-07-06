@@ -2,8 +2,6 @@
 title: "Direct Mail Targeting: Mail Less, Make More"
 ---
 
-# [Michael Belli](https://mcbelli.github.io/)
-
 # Direct Mail Targeting: Mail Less, Make More
 
 [← Back to Home](https://mcbelli.github.io/)
